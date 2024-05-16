@@ -1,0 +1,60 @@
+/* ApplyPage.css */
+
+.apply-page {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .apply-page h2 {
+    margin-bottom: 20px;
+  }
+  
+  .apply-page form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .apply-page div {
+    margin-bottom: 15px;
+  }
+  
+  .apply-page label {
+    font-weight: bold;
+  }
+  
+  .apply-page input[type="email"],
+  .apply-page input[type="text"],
+  .apply-page textarea,
+  .apply-page input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  
+  .apply-page button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .apply-page button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .apply-page .error {
+    color: red;
+    margin-top: 10px;
+  }
+  
+  

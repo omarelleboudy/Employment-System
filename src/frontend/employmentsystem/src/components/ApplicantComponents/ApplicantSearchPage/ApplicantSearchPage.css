@@ -1,0 +1,88 @@
+.applicant-search-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .search-form {
+    margin-bottom: 20px;
+  }
+  
+  .search-form input[type="text"] {
+    width: 300px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .search-form button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .apply button:hover {
+    background-color: #0056b3;
+  }
+  
+  .search-results button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .search-results button:hover {
+    background-color: #0056b3;
+  }
+  .error {
+    color: red;
+    margin-top: 10px;
+  }
+  
+  .search-results {
+    margin-top: 20px;
+  }
+  
+  .search-results ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .search-results li {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  .search-results li h4 {
+    margin-top: 0;
+  }
+  
+  .search-results li p {
+    margin-bottom: 0;
+  }
+  
+  /* Remove link styles */
+.apply-link {
+  color: white;
+  text-decoration: none;
+}
+
+.apply-link:visited {
+  color: white;
+}
+
+.apply-link:hover {
+  color: white;
+  text-decoration: none;
+}
