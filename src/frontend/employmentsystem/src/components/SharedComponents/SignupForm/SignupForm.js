@@ -13,6 +13,7 @@ function SignupForm({ history }) {
     password: '',
     role: '1', // Default role is 'Applicant'
   });
+  const [error, setError] = useState(null); // State for error message
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -30,7 +31,7 @@ function SignupForm({ history }) {
       // Redirect to login page
       history.push('/login');
     } catch (error) {
-      console.error('Error signing up:', error);
+      setError(error.response.data.errors[0].message); // Set error message
     }
   };
 
@@ -43,6 +44,7 @@ function SignupForm({ history }) {
         <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} />
         <input type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} />
         <RoleDropdown value={formData.role} onChange={handleRoleChange} />
+        {error && <div className="error">{error}</div>} {/* Display error message */}
         <button type="submit">Sign Up</button>
       </form>
     </div>
