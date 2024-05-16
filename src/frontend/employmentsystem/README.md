@@ -7,10 +7,10 @@
 Before you start, make sure you have the following installed:
 - [Node.js](https://nodejs.org/) (LTS version recommended)
 - [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/) (Yarn is optional but recommended)
-
+```
 ## Getting Started
-1. Clone this repository to your local machine:
-   ```bash
+1. Clone this repository to your local machine.
+```bash
    git clone <repository-url>
    ```
 2. Navigate into the project directory:
@@ -58,6 +58,3 @@ If you'd like to contribute to this project, please fork the repository and crea
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
-```
-
-You can copy this content and save it as `README.md` in your project directory. Then, when you push your project to GitHub, this README file will be automatically displayed on your repository's homepage.

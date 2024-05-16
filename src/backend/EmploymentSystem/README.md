@@ -1,33 +1,34 @@
-# Prerequisites:
--	.NET 7
--	MS SQL Server
+# Employment System
 
-# How To Run:
+## Prerequisites:
+- .NET 7
+- MS SQL Server
 
-## This guide assumes that all required NuGET packages are already installed. If you are not sure, run a Clean and Rebuild before starting.
+## How To Run:
 
-1-	Make sure SQL Server is set up and ready for new databases instances, and set up your connection string in appsettings.
+### Setting Up the Environment:
+1. **Database Setup**:
+   - Make sure SQL Server is set up and ready for new database instances.
+   - Set up your connection string in `appsettings.json`.
+   - For local testing, ensure that the connection strings include `"Encrypted=false;"`. Otherwise, Entity Framework Core may have issues creating the database automatically.
 
+2. **Logging Database**:
+   - Create a logging database with a name that matches the one under the connection string `Serilog:LoggingDBConnection` in `appsettings.json`.
+   - The database can be empty, as the project will create the required table.
 
-2-	For Local Testing, keep in mind that the connection strings require “Encrypted=false;” or Entity Framework Core may not be able to automatically create a database.
+3. **Hangfire Database**:
+   - Create a Hangfire database with a name that matches the one under the connection string `HangFireDB` in `appsettings.json`.
+   - The database can be empty, as the project will create the required tables.
 
+### Running the Application:
+1. **Apply Migrations**:
+   - Migrations needed to build up the database are already included. Check the `Migrations` folder under the Data Project.
+   - Launch the Package Manager Console from `Tools > NuGet Package Manager > Package Manager Console`.
+   - Run the command `Update-Database`.
 
-3-	Create a Logging Database with a name that matches the one under the connection string “Serilog:LoggingDBConnection” in the appsettings.json. The database can be empty, as 
-the project will take care of creating the required Table.
+2. **Verify Database Creation**:
+   - Check SQL Server to ensure that a database was added with all the required tables.
 
-
-4-	Create a Hangfire Database with a name that matches the one under the connection string “HangFireDB” in the appsettings.json. The database can be empty, as 
-the project will take care of creating the required Tables.
-
-
-5-	Migrations needed to build up the database are already there (check the folder Migrations under Data Project), launch the Package Manager Console from Tools > NuGET Package Manager > Package Manager Console
-
-
-6-	Run the command Update-Database
-
-
-7-	Check SQL Server to see if a database was added with all the required Tables.
-
-
-8-	Clean, Rebuild, then Run.
-
+3. **Build and Run**:
+   - Clean and rebuild the solution.
+   - Run the application.
