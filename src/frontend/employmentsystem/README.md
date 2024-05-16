@@ -7,10 +7,12 @@
 Before you start, make sure you have the following installed:
 - [Node.js](https://nodejs.org/) (LTS version recommended)
 - [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/) (Yarn is optional but recommended)
-
+```
 ## Getting Started
 1. Clone this repository to your local machine.
-
+```bash
+   git clone <repository-url>
+   ```
 2. Navigate into the project directory:
    ```bash
    cd project-directory
