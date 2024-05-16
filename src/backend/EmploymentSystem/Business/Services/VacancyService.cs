@@ -154,7 +154,10 @@ namespace Business.Services
 
             // Get all Vacancies where name contains vacancyName.
             var employerVacancies = await _vacancyRepository.QueryAsync(query =>
-            query.Where(v => v.Title.Contains(vacancyTitle) && v.ExpiredAt > DateTime.UtcNow && v.IsActive).Include(v=>v.Employer));
+            query.Where(v => v.Title.Contains(vacancyTitle) 
+            && v.ExpiredAt > DateTime.UtcNow 
+            && v.IsActive 
+            && v.IsArchived == false).Include(v=>v.Employer));
             // If no vacancies found, return error not found.
             if (employerVacancies == null || !employerVacancies.Any()) return result.FailedWithError(new Error(ErrorCode.NotFound, ErrorMessage.VACANCY_NOT_FOUND));
 
